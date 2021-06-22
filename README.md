@@ -16,11 +16,11 @@ if(location.path === `/pages/about`) {
 
 **Using npm:**
 
-``npm install @savchukoleksii/shopify-theme-checker``
+``npm install @savchukoleksii/shopify-template-checker``
 
 **Using yarn:**
 
-``yarn add @savchukoleksii/shopify-theme-checker``
+``yarn add @savchukoleksii/shopify-template-checker``
 
 **CDN:**
 
