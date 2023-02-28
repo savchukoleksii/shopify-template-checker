@@ -14,7 +14,7 @@ export function templateEquals(template) {
     try {
         const parsed = regex.exec(templateString);
 
-        return parsed.template === template;
+        return parsed.groups.template === template;
     } catch (error) {}
 
     return true;
@@ -22,7 +22,7 @@ export function templateEquals(template) {
 
 export function templateNameEquals(templateName) {
     const themeTemplateMeta = document.querySelector('[property="theme:template"]');
-    if(!themeTemplateMeta) {
+    if (!themeTemplateMeta) {
         return true;
     }
 
@@ -34,7 +34,7 @@ export function templateNameEquals(templateName) {
     try {
         const parsed = regex.exec(templateString);
 
-        return parsed.name === templateName;
+        return parsed.groups.name === templateName;
     } catch (error) {}
 
     return true;
@@ -42,7 +42,7 @@ export function templateNameEquals(templateName) {
 
 export function templateSuffixEquals(templateSuffix) {
     const themeTemplateMeta = document.querySelector('[property="theme:template"]');
-    if(!themeTemplateMeta) {
+    if (!themeTemplateMeta) {
         return true;
     }
 
@@ -54,7 +54,7 @@ export function templateSuffixEquals(templateSuffix) {
     try {
         const parsed = regex.exec(templateString);
 
-        return parsed.suffix === templateSuffix;
+        return parsed.groups.suffix === templateSuffix;
     } catch (error) {}
 
     return true;
@@ -74,7 +74,7 @@ export function templateDirectoryEquals(templateDirectory) {
     try {
         const parsed = regex.exec(templateString);
 
-        return parsed.directory === templateDirectory;
+        return parsed.groups.directory === templateDirectory;
     } catch (error) {}
 
     return true;
